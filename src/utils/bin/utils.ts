@@ -1,4 +1,5 @@
 import packageJson from '../../../package.json';
+import config from '../../../config.json';
 import * as bin from './index';
 
 export const help = async (args: string[]): Promise<string> => {
@@ -20,15 +21,15 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const gui = async (args: string[]): Promise<string> => {
-  window.open('https://stsgaminggroup.com', '_self');
+  window.open(config.guiUrl, '_self');
 
   return 'Opening GUI version...';
 };
 
 export const email = async (args: string[]): Promise<string> => {
-  window.open('mailto:kariera@sts.pl');
+  window.open(`mailto:${config.email}`);
 
-  return 'Opening mailto:kariera@sts.pl...';
+  return `Opening mailto:${config.email}...`;
 };
 
 export const vi = async (args: string[]): Promise<string> => {
@@ -53,37 +54,18 @@ export const sudo = async (args?: string[]): Promise<string> => {
 
 export const repo = async (args?: string[]): Promise<string> => {
   setTimeout(function () {
-    window.open('https://github.com/sts-gaming-group', '_blank');
+    window.open(config.repoUrl, '_blank');
   }, 1000);
 
   return 'Opening repository...';
 };
 
 export const donate = async (args?: string[]): Promise<string> => {
-  window.open(packageJson.funding.url, '_blank');
+  window.open(config.fundingUrl, '_blank');
 
   return 'Opening donation url...';
 };
 
 export const banner = (args?: string[]): string => {
-  return `
-
-
- ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄                 ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄ 
-▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌               ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌
-▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀                 ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌
-▐░▌               ▐░▌     ▐░▌                              ▐░▌     ▐░▌          ▐░▌          ▐░▌       ▐░▌
-▐░█▄▄▄▄▄▄▄▄▄      ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄                     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌
-▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌                    ▐░▌     ▐░░░░░░░░░░░▌▐░▌          ▐░░░░░░░░░░░▌
- ▀▀▀▀▀▀▀▀▀█░▌     ▐░▌      ▀▀▀▀▀▀▀▀▀█░▌                    ▐░▌     ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌          ▐░█▀▀▀▀▀▀▀█░▌
-          ▐░▌     ▐░▌               ▐░▌                    ▐░▌     ▐░▌          ▐░▌          ▐░▌       ▐░▌
- ▄▄▄▄▄▄▄▄▄█░▌     ▐░▌      ▄▄▄▄▄▄▄▄▄█░▌                    ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌       ▐░▌
-▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌                    ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌
- ▀▀▀▀▀▀▀▀▀▀▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀                      ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀ 
-                                                                                                          
-                                                                                        
-
-
-Type 'help' to see list of available commands.
-`;
+  return config.banner;
 };

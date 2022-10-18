@@ -3,8 +3,14 @@
   "social": {
     "instagram": "sts.pl",
     "github": "sts-gaming-group",
-    "linkedin": "sts-gaming-group"
+    "linkedin": "https://www.linkedin.com/company/sts-gaming-group/"
   },
+  "fundingUrl": "https://www.sporttwojaszansa.pl/fundacja-chce-wesprzec-fundacje/",
+  "pageTitle": "STS Tech | Home",
+  "guiUrl": "https://stsgaminggroup.com",
+  "repoUrl": "https://github.com/sts-gaming-group",
+  "email": "kariera@sts.pl",
+  "banner": "  ____ _____ ____    _____ _____ ____ _   _ \n / ___|_   _/ ___|  |_   _| ____/ ___| | | |\n \\___ \\ | | \\___ \\    | | |  _|| |   | |_| |\n  ___) || |  ___) |   | | | |__| |___|  _  |\n |____/ |_| |____/    |_| |_____\\____|_| |_|\n \nWpisz 'help' żeby zobaczyć listę dostępnych komend.\n \n Polecamy tryb horyzontalny na urządzeniach mobilnych\n",
   "theme": "borland",
   "border": true
 }
